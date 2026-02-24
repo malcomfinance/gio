@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIO Uganda | Go Green For Life</title>
+    
+    <meta property="og:title" content="GIO Uganda | Greening International Organization">
+    <meta property="og:description" content="Pioneering sustainable environmental conservation, animal farming, and community empowerment across Uganda.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/malcomfinance/gio/main/og-image.png">
+    <meta property="og:url" content="https://giouganda.org">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/malcomfinance/gio/main/og-image.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        leaf: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                            950: '#052e16',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(5, 46, 22, 0.9) 0%, rgba(20, 83, 45, 0.6) 100%);
+        }
+        .nav-scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-leaf-50 text-gray-800 overflow-x-hidden">
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent text-white py-4">
+        <div class="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-32">
+            <div class="flex justify-between items-center h-12">
+                <div class="flex items-center gap-2 cursor-pointer" onclick="switchPage('home')">
+                    <i data-lucide="leaf" class="w-8 h-8 text-leaf-400"></i>
+                    <span class="font-bold text-2xl tracking-tight">GIO Uganda</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="hover:text-leaf-300 transition-colors font-medium">Home</a>
+                    <a href="#about" class="hover:text-leaf-300 transition-colors font-medium">About Us</a>
+                    <a href="#initiatives" class="hover:text-leaf-300 transition-colors font-medium">Initiatives</a>
+                    <a href="#gallery" class="hover:text-leaf-300 transition-colors font-medium">Gallery</a>
+                    <a href="#contact" class="hover:text-leaf-300 transition-colors font-medium">Contact</a>
+                    <a href="#contact" class="bg-leaf-500 hover:bg-leaf-600 text-white px-6 py-2 rounded-full font-semibold transition-all shadow-lg hover:shadow-leaf-500/30">Join Us</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-current focus:outline-none p-2">
+                        <i data-lucide="menu" class="w-7 h-7"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white text-gray-900 shadow-2xl absolute top-full left-0 w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
+                <a href="#home" class="mobile-link block px-3 py-3 rounded-md text-base font-medium hover:bg-leaf-50 hover:text-leaf-600">Home</a>
+                <a href="#about" class="mobile-link block px-3 py-3 rounded-md text-base font-medium hover:bg-leaf-50 hover:text-leaf-600">About Us</a>
+                <a href="#initiatives" class="mobile-link block px-3 py-3 rounded-md text-base font-medium hover:bg-leaf-50 hover:text-leaf-600">Initiatives</a>
+                <a href="#gallery" class="mobile-link block px-3 py-3 rounded-md text-base font-medium hover:bg-leaf-50 hover:text-leaf-600">Gallery</a>
+                <a href="#contact" class="mobile-link block px-3 py-3 rounded-md text-base font-medium hover:bg-leaf-50 hover:text-leaf-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="page-section relative h-screen min-h-[600px] flex items-center justify-center">
+        <div class="absolute inset-0 w-full h-full">
+            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=2000" alt="Uganda Nature" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4 max-w-[1920px] mx-auto w-full sm:px-6 lg:px-8 xl:px-16 2xl:px-32 flex flex-col items-center">
+            <span class="inline-block py-1 px-3 rounded-full bg-leaf-500/20 text-leaf-300 border border-leaf-500/30 font-semibold tracking-wider uppercase text-sm mb-6 backdrop-blur-sm">Greening International Organization</span>
+            <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl font-extrabold text-white tracking-tight mb-6 leading-tight max-w-5xl">
+                Go Green <span class="text-leaf-400">For Life.</span>
+            </h1>
+            <p class="mt-4 text-xl sm:text-2xl 2xl:text-3xl text-gray-200 max-w-3xl 2xl:max-w-4xl mx-auto font-light leading-relaxed mb-10">
+                Pioneering sustainable environmental conservation and community empowerment across Uganda for a greener, healthier tomorrow.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                <button onclick="switchPage('initiatives')" class="px-8 py-4 2xl:px-10 2xl:py-5 border border-transparent text-lg 2xl:text-xl font-semibold rounded-full text-white bg-leaf-600 hover:bg-leaf-500 transition-all shadow-lg hover:shadow-leaf-500/40 text-center w-full sm:w-auto">
+                    Our Projects
+                </button>
+                <button onclick="switchPage('contact')" class="px-8 py-4 2xl:px-10 2xl:py-5 border-2 border-white text-lg 2xl:text-xl font-semibold rounded-full text-white hover:bg-white hover:text-leaf-900 transition-all text-center w-full sm:w-auto">
+                    Get Involved
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="page-section hidden pt-32 pb-24 2xl:pt-40 2xl:pb-32 min-h-screen bg-white">
+        <div class="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-32">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 2xl:gap-24 items-center">
+                <div class="relative group">
+                    <div class="absolute -inset-4 bg-leaf-100 rounded-[3rem] transform -rotate-3 transition-transform group-hover:rotate-0 duration-500"></div>
+                    <img src="2.png" onerror="this.src='https://images.unsplash.com/photo-1466692476877-333e20d20d58?auto=format&fit=crop&q=80&w=1000'" alt="Planting tree" class="relative rounded-3xl shadow-2xl object-cover w-full h-[500px] 2xl:h-[700px] z-10 transition-transform duration-500 group-hover:scale-[1.02]" />
+                    <div class="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-xl z-20 max-w-xs border border-leaf-50">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-leaf-100 p-3 rounded-full text-leaf-600">
+                                <i data-lucide="globe-2" class="w-8 h-8"></i>
+                            </div>
+                            <div>
+                                <p class="text-3xl font-bold text-gray-900">10k+</p>
+                                <p class="text-sm text-gray-500 font-medium">Trees Planted</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h2 class="text-leaf-600 font-bold tracking-wide uppercase text-sm mb-2">Who We Are</h2>
+                    <h3 class="text-4xl 2xl:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">Committed to Uganda's Natural Heritage</h3>
+                    <p class="text-lg 2xl:text-xl text-gray-600 mb-8 leading-relaxed">
+                        Greening International Organization (GIO) Uganda is a premier environmental NGO dedicated to restoring ecosystems, fighting climate change, and promoting sustainable agriculture including livestock farming.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 mt-1 bg-leaf-100 p-2 rounded-lg text-leaf-600">
+                                <i data-lucide="target" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl 2xl:text-2xl font-bold text-gray-900">Our Mission</h4>
+                                <p class="mt-2 text-gray-600 2xl:text-lg">To empower Ugandan communities through active participation in environmental conservation and sustainable resource management.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 mt-1 bg-leaf-100 p-2 rounded-lg text-leaf-600">
+                                <i data-lucide="eye" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl 2xl:text-2xl font-bold text-gray-900">Our Vision</h4>
+                                <p class="mt-2 text-gray-600 2xl:text-lg">A greener, resilient Uganda where humanity and nature coexist in perfect harmony for generations to come.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="initiatives" class="page-section hidden pt-32 pb-24 2xl:pt-40 2xl:pb-32 min-h-screen bg-leaf-50">
+        <div class="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-32">
+            <div class="text-center max-w-3xl mx-auto mb-16 2xl:mb-24">
+                <h2 class="text-leaf-600 font-bold tracking-wide uppercase text-sm mb-2">What We Do</h2>
+                <h3 class="text-4xl 2xl:text-5xl font-extrabold text-gray-900 mb-4">Our Core Initiatives</h3>
+                <p class="text-lg 2xl:text-xl text-gray-600">We tackle environmental challenges through strategic, community-driven projects designed to create lasting impact.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 2xl:gap-12">
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-gray-100 group">
+                    <div class="w-16 h-16 bg-leaf-100 rounded-2xl flex items-center justify-center text-leaf-600 mb-6 group-hover:bg-leaf-600 group-hover:text-white transition-colors duration-300">
+                        <i data-lucide="trees" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Afforestation</h4>
+                    <p class="text-gray-600 leading-relaxed">Massive tree-planting campaigns across deforested regions to restore green cover and air quality.</p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-gray-100 group">
+                    <div class="w-16 h-16 bg-leaf-100 rounded-2xl flex items-center justify-center text-leaf-600 mb-6 group-hover:bg-leaf-600 group-hover:text-white transition-colors duration-300">
+                        <i data-lucide="dog" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Animal Farming</h4>
+                    <p class="text-gray-600 leading-relaxed">Promoting sustainable livestock and animal farming practices that support community livelihoods while respecting the land.</p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-gray-100 group">
+                    <div class="w-16 h-16 bg-leaf-100 rounded-2xl flex items-center justify-center text-leaf-600 mb-6 group-hover:bg-leaf-600 group-hover:text-white transition-colors duration-300">
+                        <i data-lucide="book-open-check" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Eco-Education</h4>
+                    <p class="text-gray-600 leading-relaxed">Integrating environmental awareness into school curricula and hosting community workshops.</p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-gray-100 group">
+                    <div class="w-16 h-16 bg-leaf-100 rounded-2xl flex items-center justify-center text-leaf-600 mb-6 group-hover:bg-leaf-600 group-hover:text-white transition-colors duration-300">
+                        <i data-lucide="recycle" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Waste Management</h4>
+                    <p class="text-gray-600 leading-relaxed">Promoting recycling and proper waste disposal techniques to keep Ugandan cities clean.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="page-section hidden pt-32 pb-24 2xl:pt-40 2xl:pb-32 min-h-screen bg-white">
+        <div class="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-32">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 2xl:mb-16">
+                <div class="max-w-2xl">
+                    <h2 class="text-leaf-600 font-bold tracking-wide uppercase text-sm mb-2">Visual Impact</h2>
+                    <h3 class="text-4xl 2xl:text-5xl font-extrabold text-gray-900">GIO Uganda in Action</h3>
+                </div>
+                <p class="text-gray-600 2xl:text-lg mt-4 md:mt-0 font-medium">Capturing the heart of our conservation and farming projects.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 2xl:gap-6">
+                <div class="h-64 2xl:h-96 rounded-2xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1595273670150-db0a3d39dbd3?auto=format&fit=crop&q=80&w=800" alt="Livestock farming" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+                <div class="h-64 2xl:h-96 rounded-2xl overflow-hidden group sm:col-span-2">
+                    <img src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?auto=format&fit=crop&q=80&w=1200" alt="Community gathering" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+                <div class="h-64 2xl:h-96 rounded-2xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&q=80&w=800" alt="Plant detail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="page-section hidden pt-32 pb-24 2xl:pt-40 2xl:pb-32 min-h-screen bg-gray-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="leaf-pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+                        <path d="M50 15 C30 15 15 30 15 50 C15 70 30 85 50 85 C70 85 85 70 85 50 C85 30 70 15 50 15 Z M50 25 C65 25 75 35 75 50 C75 65 65 75 50 75 C35 75 25 65 25 50 C25 35 35 25 50 25 Z" fill="currentColor"/>
+                    </pattern>
+                </defs>
+                <rect x="0" y="0" width="100%" height="100%" fill="url(#leaf-pattern)"/>
+            </svg>
+        </div>
+        
+        <div class="relative z-10 max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-32">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 2xl:gap-24">
+                
+                <div>
+                    <h2 class="text-leaf-400 font-bold tracking-wide uppercase text-sm mb-2">Get In Touch</h2>
+                    <h3 class="text-4xl 2xl:text-5xl font-extrabold mb-6">Let's Protect Our Planet Together</h3>
+                    <p class="text-gray-400 2xl:text-xl mb-10 leading-relaxed">Whether you want to volunteer, partner with us, or simply learn more about our initiatives, our support team is ready to assist you.</p>
+                    
+                    <div class="space-y-8">
+                        <div class="bg-gray-800/50 p-6 2xl:p-8 rounded-2xl border border-gray-700 backdrop-blur-sm">
+                            <h4 class="text-xl 2xl:text-2xl font-semibold mb-4 text-white flex items-center gap-3">
+                                <i data-lucide="phone-call" class="text-leaf-400"></i> Support Hotlines
+                            </h4>
+                            <ul class="space-y-4 text-lg 2xl:text-xl text-gray-300">
+                                <li class="flex items-center gap-3 hover:text-leaf-400 transition-colors">
+                                    <span class="w-2 h-2 rounded-full bg-leaf-500"></span>
+                                    <a href="tel:+256200907108">+256 200 907 108</a>
+                                </li>
+                                <li class="flex items-center gap-3 hover:text-leaf-400 transition-colors">
+                                    <span class="w-2 h-2 rounded-full bg-leaf-500"></span>
+                                    <a href="tel:+256772299783">+256 772 299 783</a>
+                                </li>
+                                <li class="flex items-center gap-3 hover:text-leaf-400 transition-colors">
+                                    <span class="w-2 h-2 rounded-full bg-leaf-500"></span>
+                                    <a href="tel:+256394898940">+256 394 898 940</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="flex items-center gap-4 text-gray-400">
+                            <i data-lucide="map-pin" class="text-leaf-400 w-6 h-6"></i>
+                            <span class="text-lg 2xl:text-xl">Headquarters: Kampala, Uganda</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-gray-400">
+                            <i data-lucide="mail" class="text-leaf-400 w-6 h-6"></i>
+                            <span class="text-lg 2xl:text-xl">info@giouganda.org</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 2xl:p-12 shadow-2xl text-gray-900">
+                    <h4 class="text-3xl 2xl:text-4xl font-bold mb-8">Send a Message</h4>
+                    <form class="space-y-6" onsubmit="event.preventDefault();">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                            <input type="text" class="w-full px-5 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-leaf-500 focus:border-transparent transition-all" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                            <input type="email" class="w-full px-5 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-leaf-500 focus:border-transparent transition-all" placeholder="john@example.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea rows="4" class="w-full px-5 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-leaf-500 focus:border-transparent transition-all resize-none" placeholder="How can we help you?"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-leaf-600 hover:bg-leaf-700 text-white font-bold py-4 rounded-xl transition-colors text-lg shadow-lg hover:shadow-leaf-600/30">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-950 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-32 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2 cursor-pointer" onclick="switchPage('home')">
+                <i data-lucide="leaf" class="w-6 h-6 text-leaf-500"></i>
+                <span class="font-bold text-xl text-white">GIO Uganda</span>
+            </div>
+            <p class="text-center md:text-left">&copy; 2026 Greening International Organization Uganda. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-white transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const navbar = document.getElementById('navbar');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const sections = ['home', 'about', 'initiatives', 'gallery', 'contact'];
+        let isMenuOpen = false;
+        let currentPage = 'home';
+
+        function updateNavbar() {
+            if (currentPage !== 'home' || window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled', 'text-gray-900', 'py-2');
+                navbar.classList.remove('text-white', 'bg-transparent', 'py-4');
+                document.querySelectorAll('.hover\\:text-leaf-300').forEach(el => {
+                    el.classList.remove('hover:text-leaf-300');
+                    el.classList.add('hover:text-leaf-600');
+                });
+            } else {
+                navbar.classList.remove('nav-scrolled', 'text-gray-900', 'py-2');
+                navbar.classList.add('text-white', 'bg-transparent', 'py-4');
+                document.querySelectorAll('.hover\\:text-leaf-600').forEach(el => {
+                    el.classList.remove('hover:text-leaf-600');
+                    el.classList.add('hover:text-leaf-300');
+                });
+            }
+        }
+
+        window.addEventListener('scroll', updateNavbar);
+
+        function switchPage(pageId) {
+            currentPage = pageId;
+            sections.forEach(id => {
+                const el = document.getElementById(id);
+                if (id === pageId) {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            });
+            window.scrollTo(0, 0);
+            updateNavbar();
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                if (sections.includes(targetId)) {
+                    switchPage(targetId);
+                    if (isMenuOpen) toggleMenu();
+                }
+            });
+        });
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('hidden');
+                navbar.classList.add('nav-scrolled', 'text-gray-900');
+                navbar.classList.remove('text-white');
+            } else {
+                mobileMenu.classList.add('hidden');
+                updateNavbar();
+            }
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+    </script>
+</body>
+</html>
